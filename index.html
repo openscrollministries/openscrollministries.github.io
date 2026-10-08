@@ -46,6 +46,17 @@ nav a.shop{background:var(--seal);color:var(--seal-ink);padding:8px 16px;border-
 nav a.shop:hover{filter:brightness(1.1)}
 
 main{padding-block:44px 28px}
+/* this sunday */
+.sun{max-width:760px}
+.sun .refs{font-family:var(--mono);font-size:.9rem;color:var(--muted);margin-top:14px}
+.sun .card{background:var(--panel);border:1px solid var(--rule);padding:24px 26px;margin-top:28px}
+.sun .card h2{font-size:1.5rem;margin-bottom:10px}
+.sun ol{padding-left:1.3em;margin:0}
+.sun ol li{margin-bottom:12px}
+.sun ol strong{font-family:var(--display);font-size:1.1rem;font-weight:600}
+.sun .note{color:var(--muted);font-size:.92rem;margin-top:28px}
+.sunstrip{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline;justify-content:space-between;border:1px solid var(--rule);background:var(--panel);padding:16px 20px;margin-top:36px}
+.sunstrip p{margin:0}
 .view>*+*{margin-top:0}
 
 /* home */
@@ -209,6 +220,7 @@ footer a{color:var(--muted)}
   </a>
   <nav aria-label="Main">
     <a href="#home" data-nav="home">Home</a>
+    <a href="#sunday" data-nav="sunday">This Sunday</a>
     <a href="#daily" data-nav="daily">Daily</a>
     <a href="#church" data-nav="church">Persecuted Church</a>
     <a href="#start" data-nav="start">Start here</a>
@@ -283,9 +295,37 @@ footer a{color:var(--muted)}
     </ul>
   </section>
 
+  <div class="sunstrip">
+    <p><span class="label">This Sunday · Oct 11</span><br><strong>Dancing Around the Calf</strong> · Exodus 32 and Matthew 22</p>
+    <a href="#sunday">Read the common thread</a>
+  </div>
+
   <div class="season">
     <p><strong>Advent begins November 29.</strong> A candle-lighting liturgy, a full worship pack, and a nativity drama are ready now.</p>
     <a href="#start">See the Advent resources</a>
+  </div>
+</div>
+
+<!-- THIS SUNDAY -->
+<div class="view" id="v-sunday" hidden>
+  <div class="sun">
+    <span class="label">This Sunday · October 11, 2026 · Revised Common Lectionary</span>
+    <h1 style="margin-top:12px">Dancing Around the Calf: Israel’s Idol Party</h1>
+    <p class="refs">Exodus 32:1–14 · Matthew 22:1–14</p>
+    <div class="card">
+      <span class="label">The common thread</span>
+      <h2 style="margin-top:8px">God invites, and we look for something else.</h2>
+      <p>Israel got tired of waiting on Moses and made a god they could see. The guests in Jesus’ parable had better things to do than come to the king’s wedding feast. In both stories God doesn’t give up. Moses pleads and the Lord relents, and the king fills his hall with people from the streets. But the invitation still asks something of us, like the wedding garment does.</p>
+    </div>
+    <div class="card">
+      <span class="label">Sermon outline</span>
+      <ol style="margin-top:14px">
+        <li><strong>Impatience builds idols.</strong> What do we make when God seems slow?</li>
+        <li><strong>Excuses are idols too.</strong> Fields, business, and busyness can crowd out the feast.</li>
+        <li><strong>Grace keeps inviting.</strong> Come as you are, but come ready to be changed.</li>
+      </ol>
+    </div>
+    <p class="note">A new common thread is posted here every week, free for pastors and teachers to use. For full studies and worship resources, visit the <a href="https://openscrollministries.com" target="_blank" rel="noopener">Open Scroll shop</a>.</p>
   </div>
 </div>
 
@@ -535,7 +575,7 @@ footer a{color:var(--muted)}
     show(todayA,false);
   })();
 
-  var views=['home','daily','church','start','studies','about'];
+  var views=['home','sunday','daily','church','start','studies','about'];
   function show(){
     var h=(location.hash||'#home').slice(1);
     if(views.indexOf(h)<0)h='home';
