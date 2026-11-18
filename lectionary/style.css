@@ -1,0 +1,92 @@
+/* Weekly Lectionary pages. Tokens and type match the homepage. */
+:root{
+  --bg:#f1f2f0; --panel:#e5e8e4; --fg:#15212e; --muted:#53606b; --rule:#c6ccc7;
+  --seal:#8e2a2a; --seal-ink:#ffffff; --link:#8e2a2a;
+  --display:'Frank Ruhl Libre','Times New Roman',serif;
+  --body:'Work Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#10171f; --panel:#18222d; --fg:#e7ebe8; --muted:#9aa7b0; --rule:#2c3946;
+  --seal:#d9695c; --seal-ink:#10171f; --link:#e58b80; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10171f; --panel:#18222d; --fg:#e7ebe8; --muted:#9aa7b0; --rule:#2c3946;
+  --seal:#d9695c; --seal-ink:#10171f; --link:#e58b80; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:1rem;line-height:1.6;padding-inline:16px;margin:0}
+a{color:var(--link)}
+a:focus-visible{outline:2px solid var(--seal);outline-offset:3px}
+.wrap{max-width:1040px;margin-inline:auto;min-width:0}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.3rem,6vw,3.6rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.45rem,3vw,1.85rem);margin-top:2.2rem}
+h3{font-size:1.2rem}
+p{margin:0 0 1em;max-width:68ch}
+.label{font-family:var(--mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+
+header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding-block:20px;border-bottom:1px solid var(--rule)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--fg)}
+.brand span{font-family:var(--display);font-size:1.35rem;font-weight:700;letter-spacing:.01em}
+.seal{width:34px;height:34px;flex:none}
+nav{display:flex;flex-wrap:wrap;gap:4px 22px;align-items:center}
+nav a{color:var(--fg);text-decoration:none;font-weight:500;font-size:.95rem;padding-block:4px;border-bottom:2px solid transparent}
+nav a:hover{border-bottom-color:var(--rule)}
+nav a[aria-current="page"]{border-bottom-color:var(--seal)}
+nav a.shop{background:var(--seal);color:var(--seal-ink);padding:8px 16px;border-radius:3px;border-bottom:0}
+nav a.shop:hover{filter:brightness(1.1)}
+
+main{padding-block:44px 28px}
+.pagehead{max-width:68ch;margin-bottom:8px}
+.pagehead p{color:var(--muted);font-size:1.08rem;margin-top:16px}
+.lede{font-size:1.12rem;color:var(--muted);margin-top:16px}
+
+.prose p{font-size:1.05rem}
+.note,.src{color:var(--muted);font-size:.92rem}
+.src a{color:var(--muted)}
+
+.rd{display:grid;grid-template-columns:minmax(0,12.5rem) minmax(0,1fr);gap:8px 20px;margin:18px 0 0;max-width:68ch}
+.rd dt{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:.4em}
+.rd dd{margin:0}
+
+.scripture{background:var(--panel);border:1px solid var(--rule);padding:8px 22px 16px;margin:16px 0 0;max-width:72ch}
+.scripture p{margin:.85em 0;max-width:65ch}
+.scripture sup{font-family:var(--mono);font-size:.68em;letter-spacing:0;color:var(--seal);margin-right:.4em;font-weight:500;top:-.35em}
+.gap{font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:1.1em 0}
+
+ol.questions{padding-left:1.25em;max-width:68ch;margin:14px 0 0}
+ol.questions li{margin:0 0 .85em}
+.prayer{font-family:var(--display);font-size:1.22rem;line-height:1.45;border-left:3px solid var(--seal);padding-left:16px;max-width:62ch;margin-top:14px}
+
+.resources{list-style:none;margin:12px 0 0;padding:0;max-width:72ch}
+.resources li{padding:14px 0;border-bottom:1px solid var(--rule)}
+.resources a{font-family:var(--display);font-size:1.22rem;color:var(--fg);text-decoration:none;line-height:1.25}
+.resources a:hover{color:var(--link)}
+.resources p{margin:6px 0 0;color:var(--muted);font-size:.95rem}
+
+.weeks{list-style:none;margin:8px 0 0;padding:0}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 20px;align-items:baseline;padding:16px 4px;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--fg)}
+.row:hover{background:var(--panel)}
+.row:hover .rtitle{color:var(--link)}
+.rt{display:flex;flex-direction:column;gap:3px;min-width:0}
+.rtitle{font-family:var(--display);font-size:1.28rem;line-height:1.25}
+.rref{font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.rdate{font-family:var(--mono);font-size:.82rem;color:var(--muted);white-space:nowrap}
+
+.weeknav{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;margin-top:40px;padding-top:18px;border-top:1px solid var(--rule)}
+.weeknav a{font-weight:500;text-decoration:none;color:var(--fg)}
+.weeknav a:hover{color:var(--link)}
+.weeknav .next{margin-left:auto;text-align:right}
+
+footer{border-top:1px solid var(--rule);padding-block:28px 40px;display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;color:var(--muted);font-size:.9rem}
+footer a{color:var(--muted)}
+
+@media (max-width:760px){
+  main{padding-block:32px 20px}
+  .rd{grid-template-columns:1fr;gap:2px 0}
+  .rd dt{padding-top:12px}
+  .row{grid-template-columns:1fr}
+  .rdate{white-space:normal}
+  .scripture{padding-inline:16px}
+}
+@media (prefers-reduced-motion:no-preference){nav a,.row,.resources a{transition:background .15s,color .15s,border-color .15s}}
