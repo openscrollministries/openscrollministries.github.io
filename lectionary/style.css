@@ -78,8 +78,15 @@ ol.questions li{margin:0 0 .85em}
 .weeknav a:hover{color:var(--link)}
 .weeknav .next{margin-left:auto;text-align:right}
 
-footer{border-top:1px solid var(--rule);padding-block:28px 40px;display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;color:var(--muted);font-size:.9rem}
+footer{border-top:1px solid var(--rule);padding-block:28px 40px;display:flex;flex-direction:column;align-items:stretch;gap:0;color:var(--muted);font-size:.9rem}
 footer a{color:var(--muted)}
+footer .foot-row{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;width:100%}
+footer .follow{display:flex;flex-direction:column;align-items:flex-start;gap:12px;width:100%;margin-top:22px}
+footer .follow-label{margin:0;font-family:var(--mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+footer .social{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+footer .social a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid var(--rule);border-radius:999px;color:var(--fg);text-decoration:none}
+footer .social a:hover,footer .social a:focus-visible{border-color:var(--link);color:var(--link);outline:none}
+footer .social svg{width:18px;height:18px;fill:currentColor;display:block}
 
 @media (max-width:760px){
   main{padding-block:32px 20px}
