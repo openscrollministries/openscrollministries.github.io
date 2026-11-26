@@ -2,34 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://openscrollministries.com/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://openscrollministries.com/resources/</loc>
+    <lastmod>2026-11-26</lastmod>
+  </url>
+  <url>
+    <loc>https://openscrollministries.com/free-advent-sample/</loc>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://openscrollministries.com/lectionary/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://openscrollministries.com/lectionary/2026-11-22-reign-of-christ.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://openscrollministries.com/lectionary/2026-11-29-advent-1.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://openscrollministries.com/lectionary/2026-12-06-advent-2.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://openscrollministries.com/lectionary/2026-12-13-advent-3.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://openscrollministries.com/lectionary/2026-12-20-advent-4.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://openscrollministries.com/lectionary/2026-12-24-christmas-proper-1.html</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-26</lastmod>
   </url>
 </urlset>
